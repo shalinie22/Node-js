@@ -17,14 +17,6 @@ app.get("/", (req, res) => {
     res.send(files);
   })
 });
-
-app.get("/list", (req, res) => {
-  fs.readdir(path.join(__dirname, "taskfolder"), (err, files) => {
-    if (err) throw err;
-    res.send(files);
-  });
-  console.log(__dirname);
-});
 app.listen(port, () => {
   console.log(`server is listening ${port}`);
 });
