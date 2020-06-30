@@ -2,7 +2,6 @@ const fs = require("fs");
 const express = require("express");
 const app = express();
 const port = 4000;
-const path = require("path");
 app.get("/", (req, res) => {
   fs.writeFile("date-time.txt", SetTime("./date-time.txt"), (err) => {
     if (err) throw err;
